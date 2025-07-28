@@ -18,7 +18,7 @@ export class ApiManager {
             location: data.address,
             time: conditions.datetime,
             icon: conditions.icon,
-            temperature: 66.4,
+            temperature: conditions.temp,
             rainChance: conditions.precipprob,
             windSpeed: conditions.windspeed
         }
