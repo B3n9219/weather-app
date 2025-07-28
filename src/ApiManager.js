@@ -1,3 +1,7 @@
+// const image = document.querySelector("img")
+// image.src = images(`./clear-day.svg`)
+// console.log(images(`./clear-day.svg`))
+
 export class ApiManager {
     constructor() {
         this.apiKey = "6NCXL4P4T2WWKND8DQ7DKY9R8"
@@ -8,7 +12,7 @@ export class ApiManager {
         return await response.json()
     }
     filterLocationData(data) {
-        console.log(data)
+        console.log("filtering data", data)
         const conditions = data.currentConditions
         return {
             location: data.address,

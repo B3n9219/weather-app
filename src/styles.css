@@ -1,0 +1,22 @@
+:root {
+    font-family: Roboto, serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.app {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+}
+
+.weather, .search {
+    grid-column: 2
+}
+
+.weather {
+    border: 2px solid black;
+    padding: 5rem;
+}
+

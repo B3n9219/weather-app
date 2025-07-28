@@ -1,6 +1,10 @@
 import "./styles.css";
-import {ApiManager} from "./ApiManager";
+import { ApiManager } from "./ApiManager";
+import { DisplayManager } from "./DisplayManager";
 
 const apiManager = new ApiManager()
-const data = await apiManager.getLocationData("london")
-console.log(apiManager.filterLocationData(data))
+const data = apiManager.filterLocationData(await apiManager.getLocationData("london"))
+
+const weatherDisplay = document.querySelector(".weather")
+const displayManager = new DisplayManager(weatherDisplay, data)
+displayManager.renderWeatherInfo()
